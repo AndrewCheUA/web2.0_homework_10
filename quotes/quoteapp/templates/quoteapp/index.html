@@ -31,7 +31,7 @@
     {% for quote in quotes %}
     <div class="card">
         <div class="card-body">
-            <a href="{{ quote.show_quote_author }}" >{{ quote.author }}</a>
+            <a href="author/{{ quote.show_quote_author }}">{{ quote.author }}</a>
             <p class="card-text">{{ quote.text }}</p>
         </div>
     </div>

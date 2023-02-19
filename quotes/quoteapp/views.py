@@ -50,9 +50,9 @@ def author(request):
             form.save()
             return redirect(to='quoteapp:main')
         else:
-            return render(request, 'quoteapp/author.html', {'form': form})
+            return render(request, 'quoteapp/authoradd.html', {'form': form})
 
-    return render(request, 'quoteapp/author.html', {'form': AuthorForm()})
+    return render(request, 'quoteapp/authoradd.html', {'form': AuthorForm()})
 
 
 def detail(request, quote_id):
@@ -69,4 +69,4 @@ def delete_quote(request, quote_id):
 def author_page(request, fullname):
     authors = get_object_or_404(Author, fullname=fullname)
 
-    return render(request, "quoteapp/author_info.html", {"author": authors})
+    return render(request, "quoteapp/author.html", {"author": authors})

@@ -29,5 +29,5 @@ class AuthorForm(ModelForm):
     description = CharField(widget=TextInput())
 
     class Meta:
-        model = Quote
+        model = Author
         fields = ['fullname', 'born_date', 'born_location', 'description']
